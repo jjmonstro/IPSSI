@@ -1,0 +1,8 @@
+11...
+a- para todos
+b- sim
+c- sim, todos menos o PC de ping selecionado
+d- somente a que foi selecionada no comando
+e- somente para o host que enviou a solicitação
+f- não
+g- não
