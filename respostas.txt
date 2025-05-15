@@ -1,8 +1,17 @@
 11...
-a- para todos
+a- para todos os 5 hosts
 b- sim
 c- sim, todos menos o PC de ping selecionado
 d- somente a que foi selecionada no comando
 e- somente para o host que enviou a solicitação
 f- não
 g- não
+
+18...
+h- o hub envia os pacotes de ping para todos os hosts e quando um responde ele o envia ao solicitante, já o switch manda o pacote somente ao host ao qual o pacote é destinado
+i- para testar a conexão entre hosts
+
+Máscara de Subredes – Subnet Mask
+6. o ping não é respondido, já que não a nenhum host correspondente a 255.255.255.255
+
+8. nenhum, pelo mesmo motivo anterior 
