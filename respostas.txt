@@ -14,4 +14,30 @@ i- para testar a conexão entre hosts
 Máscara de Subredes – Subnet Mask
 6. o ping não é respondido, já que não a nenhum host correspondente a 255.255.255.255
 
-8. nenhum, pelo mesmo motivo anterior 
+8. nenhum, o ping não é respondido, já que não a nenhum host correspondente a 255.255.255.255
+
+13. nenhum, o ping não é respondido, já que não a nenhum host correspondente a 255.255.255.255
+
+15. nenhum, o ping não é respondido, já que não a nenhum host correspondente a 255.255.255.255
+
+16. A- Temos 4 redes configuradas com a máscara /26. 
+
+B- 
+200.1.2.0/26
+
+200.1.2.64/26
+
+200.1.2.128/26
+
+200.1.2.192/26
+
+C-
+200.1.2.63 → para a rede 200.1.2.0/26
+
+200.1.2.127 → para a rede 200.1.2.64/26
+
+200.1.2.191 → para a rede 200.1.2.128/26
+
+200.1.2.255 → para a rede 200.1.2.192/26
+
+
