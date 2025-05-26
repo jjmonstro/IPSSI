@@ -1,0 +1,5 @@
+a O que significa e qual a função do ATA?**
+	ATA é um adaptador que conecta telefones analógicos a redes VoIP, convertendo sinal analógico em digital.
+
+b Descreva a condição onde é possível a redução de custo de uma chamada 
+	A redução de custo em uma chamada telefônica para um telefone convencional usando VoIP acontece quando a maior parte da ligação é feita pela internet, em vez de usar toda a rede telefônica tradicional. Nesse caso, a chamada é transmitida pela internet até um servidor VoIP próximo do destino, e só então ela é conectada à rede telefônica para alcançar o telefone convencional. Como apenas o trecho final da ligação usa a rede tradicional, o custo é menor, especialmente em chamadas de longa distância ou internacionais.

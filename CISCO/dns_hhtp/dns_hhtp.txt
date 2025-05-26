@@ -1,0 +1,129 @@
+Rede 0 = 200.168.0.0  
+	Server0 (IP) = 200.168.0.254
+	Default Gateway  (IP)  = 200.168.0.1  Router 0
+Rede 2 = 200.168.2.0  
+	Server2 (IP) = 200.168.2.254
+	Default Gateway  (IP)  = 200.168.2.1 Router 2
+Rede 3 = 200.168.3.0  
+	Server3 (IP) = 200.168.3.254
+	Default Gateway  (IP)  = 200.168.3.1(Router 3)  
+Rede 5 = 200.168.5.0  
+	Server5 (IP) = 200.168.5.254 
+	Default Gateway  (IP)  = 200.168.5.1 (Router 5) 
+9. Teste as conexões de rede: 
+Anote o IP de PC0:     
+	PC0 = 200.168.0.101
+	Verifique se todas as máquinas de sua rede respondem. Verifique também o TTL indicado. 
+	Todas respondem com ttl de 128,roteador responde com 255
+
+Anote o IP de PC3:     
+	PC3 = 200.168.2.102 
+	Verifique se todas as máquinas de sua rede respondem. Verifique também o TTL indicado. 
+	Todas respondem com ttl de 128,roteador responde com 255
+
+
+Anote o IP de PC6:     
+	PC6 = 200.168.3.101
+	Verifique se todas as máquinas de sua rede respondem. Verifique também o TTL indicado. 
+	Todas respondem com ttl de 128,roteador responde com 255
+
+Anote o IP de PC9:     
+	PC9 = 200.168.5.100
+	Verifique se todas as máquinas de sua rede respondem. Verifique também o TTL indicado.
+	Todas respondem com ttl de 128,roteador responde com 255
+ 
+
+12. Tabela RIP:
+	Router 0:
+	1.0.0.0
+	6.0.0.0
+	200.168.0.0
+	
+	Router 1:
+	110.0.0.0
+	1.0.0.0
+	2.0.0.0
+
+	Router 2:
+	200.168.2.0
+	2.0.0.0
+	3.0.0.0
+
+	Router 3:
+	200.168.3.0
+	3.0.0.0
+	4.0.0.0
+
+	Router 4:
+	140.0.0.0
+	4.0.0.0
+	5.0.0.0
+
+	Router 5:
+	200.168.5.0
+	5.0.0.0
+	6.0.0.0
+13. Testando ping: 
+PC0: 
+	110.0.0.110: ttl = 126, 2 routers
+	140.0.0.140: ttl = 125, 3 routers
+PC3:
+	110.0.0.110: ttl = 126, 2 routers
+	140.0.0.140: ttl = 125, 3 routers
+PC6:
+	110.0.0.110: ttl = 125, 3 routers
+	140.0.0.140: ttl = 126, 2 routers
+PC9:
+	110.0.0.110: ttl = 125, 3 routers
+	140.0.0.140: ttl = 126, 2 routers
+
+14. Sem conexão do Router 0 com o Router 1:
+ PC0: 
+	110.0.0.110: ttl = 122, 6 routers
+	140.0.0.140: ttl = 125, 3 routers
+PC3:
+	110.0.0.110: ttl = 126, 2 routers
+	140.0.0.140: ttl = 125, 3 routers
+PC6:
+	110.0.0.110: ttl = 125, 3 routers
+	140.0.0.140: ttl = 126, 2 routers
+PC9:
+	110.0.0.110: ttl = 123, 5 routers
+	140.0.0.140: ttl = 126, 2 routers
+
+22. a O que ocorre, diante de uma falha em um link de backbone, no uso do roteamento dinâmico?
+	Quando ocorre uma falha em um link de backbone, os protocolos de roteamento dinâmico detectam essa falha automaticamente e recalculam a rota, encontrando um novo caminho disponível para o tráfego de dados, se houver.
+
+b O que representa o TTL apresentado na resposta do comando “ping”?
+	O TTL indica a quantidade máxima de roteadores que um pacote pode atravessar antes de ser descartado. A cada roteador, o valor do TTL é reduzido em 1.
+
+c O que faz o comando “tracert”?
+	O comando tracert exibe o caminho que os pacotes percorrem até um destino, mostrando todos os roteadores intermediários.
+
+d O que faz o serviço HTTP?
+	O serviço HTTP permite que um servidor disponibilize páginas web que podem ser acessadas por navegadores. Ele transmite arquivos como HTML, imagens e outros conteúdos da web entre o servidor e o cliente.
+
+e O que faz o serviço DNS?
+	O serviço DNS traduz nomes de domínio para endereços IP, permitindo que dispositivos acessem serviços na internet usando nomes em vez de números.
+
+f Neste exercício, quantas redes foram configuradas?
+	12 redes
+
+g Quais os endereços de cada rede?
+	200.168.0.0
+	200.168.2.0
+	200.168.3.0
+	200.168.5.0
+
+	1.0.0.0
+	2.0.0.0
+	3.0.0.0
+	4.0.0.0
+	5.0.0.0
+	6.0.0.0
+
+	110.0.0.110
+	140.0.0.140
+
+
+

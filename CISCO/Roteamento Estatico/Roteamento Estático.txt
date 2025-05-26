@@ -1,0 +1,32 @@
+Roteamento Estático 
+
+a) O roteador tem a função de interligar diferentes redes, encaminhando pacotes de dados entre elas com base nos endereços IP de destino. Ele decide qual o melhor caminho que os dados devem seguir para chegar ao seu destino.
+
+b) É o endereço IP de um roteador configurado nos dispositivos de uma rede local para que eles possam se comunicar com dispositivos fora da sua rede, ou seja, em outras redes.
+
+c) O PC consegue se comunicar apenas com dispositivos da mesma rede local. Ele não poderá acessar dispositivos em outras redes, pois não saberá para onde encaminhar os pacotes externos.
+
+d) A principal desvantagem é que ele não é dinâmico: qualquer mudança na topologia da rede exige reconfiguração manual das rotas, o que é inviável em redes grandes ou com muitas alterações.
+
+e)É o conjunto de dispositivos que recebem um pacote enviado em broadcast. Em outras palavras, todos os dispositivos que podem receber mensagens de difusão direta uns dos outros, geralmente delimitados por switches.
+
+f) Porque roteadores não propagam pacotes de broadcast entre diferentes redes. Cada rede tem seu próprio domínio de difusão, então um broadcast em uma rede não chega à outra.
+
+g) O TTL (Time To Live) indica o número máximo de saltos que um pacote pode fazer até ser descartado. 
+A cada roteador que o pacote passa, o TTL é decrementado em 1.
+
+h) O comando tracert (ou traceroute) mostra o caminho que um pacote percorre até o destino, listando todos os roteadores intermediários (hops) com seus respectivos tempos de resposta.
+
+i) 3 Redes. 
+
+200.1.0.0/24 – Rede do Switch0 (Server0, PC0-PC4)
+
+200.1.1.0/24 – Rede do Switch1 (Server1, PC5-PC9)
+
+1.0.0.0/8 – Rede de interligação entre os dois roteadores
+
+j) Rede 1 (LAN1): 200.1.0.0/24 → Gateway: 200.1.0.1
+
+Rede 2 (LAN2): 200.1.1.0/24 → Gateway: 200.1.1.1
+
+Rede 3 (Interligação): 1.0.0.0/8 → Roteadores: 1.0.0.1 e 1.0.0.2
