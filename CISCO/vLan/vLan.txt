@@ -1,0 +1,18 @@
+11
+a O que faz o comando “show vlan brief”?
+	O comando show vlan brief mostra um resumo das VLANs configuradas no switch. Ele lista o número e nome de cada VLAN, o tipo, e as portas que estão atribuídas a cada uma delas.
+
+b As portas fa0/9, fa0/10, fa0/11 e fa0/12 não foram alteradas. A qual VLAN elas ficaram associadas?
+	Essas portas permanecem associadas à VLAN padrão do switch, que é a VLAN 1. Todo switch coloca as portas na VLAN 1 por padrão até que sejam atribuídas a outra VLAN manualmente.
+
+c Caso se mude a porta de conexão de um host que participa de uma VLAN estática, que cuidado deve ser tomado?
+	É necessário configurar a nova porta do switch para que ela pertença à mesma VLAN que a porta anterior. Caso contrário, o host não conseguirá se comunicar com os outros dispositivos da mesma VLAN, pois a VLAN está associada à porta física no caso de VLANs estáticas.
+
+d Quais vantagens podem ser encontradas com o uso de VLANs?
+	Permite segmentar logicamente a rede, mesmo com dispositivos em locais diferentes; Melhora a segurança, separando grupos de usuários; Facilita a administração e organização da rede
+
+e Como você faria para trocar mensagens entre as VLANs?
+	um roteador com subinterfaces configuradas para cada VLAN e conexão trunk com o switch
+
+f Neste exercício todos os hosts, das três VLANs, pertencem à mesma faixa de IP. É possível configurar um roteador para permitir conectividade entre as VLANs deste exercício? Por quê?
+	Sim, é possível configurar um roteador para permitir a comunicação entre as VLANs, mesmo que todos os hosts estejam na mesma faixa de IP. Porem, essa configuração não é recomendada, pois VLANs separadas normalmente deveriam estar em sub-redes diferentes. Quando todos os dispositivos usam a mesma sub-rede, o roteador pode não conseguir diferenciar de qual VLAN vem o tráfego, o que pode causar conflitos e problemas de roteamento.

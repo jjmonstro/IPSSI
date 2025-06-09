@@ -1,0 +1,34 @@
+Atribuição automática de IPs – DHCP 
+
+6- Sim, todos respondem.
+
+a) Sim, pode ter havido troca de IP. Quando você usa ipconfig /release, o PC devolve o IP ao servidor DHCP. Ao usar ipconfig /renew, ele pode receber o mesmo IP ou outro disponível na lista do servidor. Se outro PC pegar aquele IP antes da renovação, o PC que pediu novamente receberá um novo IP.
+
+b) Libera (remove) o IP atual do computador. Ele comunica ao servidor DHCP que não está mais usando aquele IP, tornando-o disponível para outros dispositivos.
+
+c) Solicita um novo IP ao servidor DHCP. Pode ser o mesmo de antes ou um novo IP livre dentro do pool.
+
+d) Sim, ao adicionar PCs PC10 ~ PC13 e configurar como DHCP, eles solicitarão IP automaticamente.
+
+e) Depende da quantidade de IPs disponíveis no servidor DHCP. Se o número de usuários configurado (ex: 11 no começo) já estiver em uso, os novos PCs não receberão IPs até que outros PCs liberem seus IPs.
+
+13- O DHCP trabalha com um pool limitado de IPs. 
+Quando o número máximo é atingido, novos dispositivos não recebem IP. 
+Apenas após a liberação (release) de um IP, outro dispositivo consegue obter um. 
+Isso simula a escassez de endereços em uma rede real.
+
+14- O DHCP (Dynamic Host Configuration Protocol) automatiza a distribuição de IPs, máscara de sub-rede, gateway e DNS para os dispositivos da rede. 
+Evita a configuração manual, reduz erros e facilita a administração de redes grandes.
+
+21.
+f) Sim, é possível ter dois servidores DHCP em uma mesma rede.
+
+g) Alta disponibilidade: Se um servidor falhar, o outro pode continuar fornecendo IPs.
+
+Balanceamento de carga: Os IPs são distribuídos entre os dois servidores.
+
+h) Evitar sobreposição de IPs: Dividir o pool de IPs entre os dois servidores (ex: um fornece de 200.1.2.100 a 200.1.2.150 e o outro de 200.1.2.151 a 200.1.2.200).
+
+Sincronização das configurações: Mesma máscara, gateway, DNS etc.
+
+Monitoramento constante para evitar conflitos.

@@ -1,0 +1,149 @@
+13. Teste as conexões de rede: 
+• Abra o prompt de comandos no PC0 e verifique o IP (ipconfig) • Anote o IP de PC0: PC0 = 200.1.0.100
+• Teste a conectividade com o restante da rede com o ping (em broadcast): ping 200.1.0.255 • Verifique se todas as máquinas de sua rede respondem. Verifique também o TTL indicado.
+• Abra o prompt de comandos no PC3 e verifique o IP (ipconfig) 
+• Anote o IP de PC3: PC3 = 200.1.1.100
+• Teste a conectividade com o restante da rede com o ping (em broadcast): ping 200.1.1.255 
+• Verifique se todas as máquinas de sua rede respondem. Verifique também o TTL indicado: TTL = 128
+
+• Abra o prompt de comandos no PC6 e verifique o IP (ipconfig)
+• Anote o IP de PC6: PC6 = 200.1.2.100
+• Teste a conectividade com o restante da rede com o ping (em broadcast): ping 200.1.2.255 
+• Verifique se todas as máquinas de sua rede respondem. Verifique também o TTL indicado: TTL = 128. 
+
+14. Configure as interfaces de rede do Router0:  
+• Clique sobre FastEthernet0/0 e configure: IP Address 200.1.0.1 Subnet Mask 255.255.255.0 Port Status on 
+Responda: Qual a classe desta rede? Classe C
+• Clique sobre Serial2/0 e configure: IP Address 1.0.0.1 Subnet Mask 255.0.0.0 Port Status on Clock Rate escolha 1200 
+Responda: Qual a classe desta rede? Classe A 
+• Clique sobre Serial3/0 e configure: IP Address 3.0.0.1 Subnet Mask 255.0.0.0 Port Status on Clock Rate escolha 9600 
+Responda: Qual a classe desta rede? Classe A
+
+15. Configure as interfaces de rede do Router1:
+	Responda: Qual a classe desta rede? Classe C
+Clique sobre Serial2/0 e configure: 
+	Clock Rate ? 1200
+	Responda: Qual a classe desta rede? Classe A
+Clique sobre Serial3/0 e configure: 
+	Responda: Qual a classe desta rede? Classe A
+
+16. Configure as interfaces de rede do Router2: 
+ 	Responda: Qual a classe desta rede? Classe C
+Clique sobre Serial2/0 e configure: 
+	Clock Rate ? 1200
+	Responda: Qual a classe desta rede? Classe A
+Clique sobre Serial3/0 e configure: 
+	Clock Rate ? 64000
+	Responda: Qual a classe desta rede? Classe A
+	ping 200.1.1.100 (IP de PC3) – TTL = 126 
+	ping 200.1.2.100(IP de PC6) – TTL = 126
+
+18. Abra o prompt de comandos no PC3 e verifique o IP (ipconfig).  
+	ping 200.1.0.100(IP de PC0) – TTL = 126
+	ping 200.1.2.100(IP de PC6) – TTL = 126
+Abra o prompt de comandos no PC6 e verifique o IP (ipconfig).  
+	ping 200.1.1.100(IP de PC3) – TTL = 126
+	ping 200.1.0.100 (IP de PC0) – TTL = 126
+
+19. Teste os domínios de rede: 
+PC0: Teste a conectividade com o restante da rede com o ping (em broadcast) 
+Verifique se todas as máquinas das duas redes respondem. 
+	Somente maquinas 1 e 2
+PC3: Teste a conectividade com o restante da rede com o ping (em broadcast) 
+Verifique se todas as máquinas das duas redes respondem. 
+	Somente maquinas 4 e 5
+PC6: Teste a conectividade com o restante da rede com o ping (em broadcast) 
+Verifique se todas as máquinas das duas redes respondem. 
+	Somente maquinas 7 e 8
+
+20. Quais redes foram afetadas? 
+	200.1.0.100(pc0) no pc6 e 200.1.2.100(pc6) no pc0
+b) Detalhe sua resposta, indicando qual rede deixou de conectar-se com qual outra rede. 
+	A rede e os computadores do switch 0 não conseguem achar um caminho para a rede do switch 2, e o mesmo ocorre para o switch 2, fazendo os dois pcs não se conectarem um com o outro.
+
+23. Configure o roteamento estático no Router1 usando o RIP 
+A caixa Network Address deverá apresentá-las: 
+Router1: (anote as rotas que estão diretamente conectadas) 
+	200.1.1.0
+	3.0.0.0
+	2.0.0.0
+
+24. Configure o roteamento estático no Router2 usando o RIP 
+A caixa Network Address deverá apresentá-las: 
+Router2: (anote as rotas que estão diretamente conectadas) 
+	1.0.0.0
+	2.0.0.0
+	200.1.2.0
+
+25. Teste a conexão entre as redes e compare com o verificado no teste do item 18 
+deste exercício (rotas estáticas) 
+Teste a conectividade com os hosts das outras redes 
+	ping 200.1.1.102 (IP de PC3) – TTL = 126 
+	ping 200.1.2.102(IP de PC6) – TTL = 126
+PC3: Teste a conectividade com os hosts das outras redes 
+	ping 200.1.0.100(IP de PC0) – TTL = 126
+	ping 200.1.2.102(IP de PC6) – TTL = 126
+ PC6: Teste a conectividade com os hosts das outras redes
+	ping 200.1.0.100(IP de PC0) – TTL = 126
+	ping 200.1.1.102(IP de PC3) – TTL = 126
+
+26. a) Alguma rede perdeu conectividade com 
+alguma outra? b) Detalhe sua resposta, indicando qual a 
+diferença notada na entrega dos pacotes. 
+	Nenhuma rede perdeu conectividade, continuaram operando igual antes.
+
+c) O que ocorre, diante de uma falha em um link de backbone, no uso do roteamento estático?
+	O tráfego entre as redes é interrompido, pois o roteamento estático não se ajusta automaticamente. O administrador precisa reconfigurar manualmente as rotas para redirecionar o tráfego por outro caminho.
+
+d) Quais as possibilidades de restaurar as conexões perdidas em uma falha em rotas estáticas?
+
+	1. Configurar rotas alternativas manualmente.
+	2. Utilizar rotas de backup com uma distância administrativa maior.
+	3. Substituir o roteamento estático por um protocolo de roteamento dinâmico.
+
+e) O que ocorre, diante de uma falha em um link de backbone, no uso do roteamento dinâmico?
+	O protocolo de roteamento detecta a falha e recalcula automaticamente uma nova rota, se houver. Isso permite a restauração rápida da conectividade sem intervenção manual.
+
+f) O que é DCE?
+	DCE (Data Communications Equipment) é o equipamento que fornece o sinal de clock para uma conexão serial.
+
+g) O que representa o clock rate nas conexões por interface DCE (seriais)?
+	O clock rate define a velocidade de transmissão de dados na interface serial do lado DCE. É necessário para sincronizar a comunicação entre dispositivos seriais.
+
+h) O que representa o TTL apresentado na resposta do comando “ping”?
+	TTL (Time To Live) representa o número máximo de roteadores que o pacote pode atravessar.
+
+i) O que faz o comando “tracert”?
+	O comando tracert exibe o caminho que os pacotes percorrem até o destino, listando todos os roteadores intermediários (saltos). É útil para diagnosticar rotas e falhas na rede.
+
+j) Neste exercício, quantas redes foram configuradas?
+3 redes para os PCs:
+
+	200.1.0.0/24
+	200.1.1.0/24
+	200.1.2.0/24
+3 redes seriais:
+	1.0.0.0/8
+	2.0.0.0/8
+	3.0.0.0/8
+Total: 6 redes
+
+k) Quais os endereços de cada rede?
+
+	200.1.0.0/24
+	200.1.1.0/24
+	200.1.2.0/24
+	1.0.0.0/8
+	2.0.0.0/8
+	3.0.0.0/8
+
+l) Quais os endereços de broadcast de cada rede?
+
+	200.1.0.0/24 → 200.1.0.255
+	200.1.1.0/24 → 200.1.1.255
+	200.1.2.0/24 → 200.1.2.255
+	1.0.0.0/8 → 1.255.255.255
+	2.0.0.0/8 → 2.255.255.255
+	3.0.0.0/8 → 3.255.255.255
+
+

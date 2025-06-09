@@ -1,0 +1,19 @@
+pc12 200.168.5.103
+
+De onde vieram estas configurações?
+Do cluster 5, do server 5 
+
+Anote o IP do host que responde:  110.0.0.110
+
+a Quem fornece as configurações de IP para que o usuário final possa navegar na Internet?
+	O servidor DHCP é o responsável por fornecer automaticamente as configurações de IP, máscara de sub-rede, gateway padrão e DNS ao usuário final.
+
+b Na rede sem fio do usuário final (WLAN), quem forneceu as configurações aos Laptops?
+	As configurações foram fornecidas pelo roteador com função DHCP habilitada que está conectado à WLAN.
+
+c Como é fornecida a configuração de DNS Server aos Laptops?
+	A configuração do servidor DNS também é fornecida automaticamente pelo servidor DHCP durante o processo de atribuição de endereço IP. O laptop recebe o endereço do DNS Server junto com as demais configurações de rede.
+
+d Ao enviar ping para um domínio, quem responde é um IP. Por quê?
+	Porque a Internet funciona com endereços IP. O nome de domínio precisa ser convertido em um endereço IP para que o pacote chegue ao destino correto. Esse processo de conversão é feito pelo servidor DNS, que responde com o IP correspondente ao nome de domínio.
+
